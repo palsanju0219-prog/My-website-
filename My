@@ -1,0 +1,50 @@
+!DOCTYPE html>
+<html>
+
+<head>
+<title>Cricket Registration</title>
+</head>
+
+<body style="text-align:center; font-family:Arial;">
+
+<h1>🏏 Cricket Registration</h1>
+
+<form onsubmit="sendWhatsApp(); return false;">
+
+<input type="text" id="name" placeholder="Player Name" required><br><br>
+
+<input type="number" id="age" placeholder="Age" required><br><br>
+
+<input type="text" id="team" placeholder="Team Name" required><br><br>
+
+<button type="submit">Submit</button>
+
+</form>
+
+<script>
+
+function sendWhatsApp(){
+
+var name = document.getElementById("name").value;
+var age = document.getElementById("age").value;
+var team = document.getElementById("team").value;
+
+var phone = "919098183623";
+
+var message =
+"🏏 Cricket Registration %0A%0A" +
+"Name: " + name + "%0A" +
+"Age: " + age + "%0A" +
+"Team: " + team;
+
+window.open(
+"https://wa.me/" + phone + "?text=" + message,
+"_blank"
+);
+
+}
+
+</script>
+
+</body>
+</html>
